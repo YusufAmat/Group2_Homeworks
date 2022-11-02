@@ -8,13 +8,16 @@ public class ArraysMaxMin {
         //En büyük ve en küçük sayıları bulup ekranda gösteren Java programını yazınız.
 
         int[] numbers = new int[10];
-        int minSayi = 0;
-        int maxSayi = 0;
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(i + 1 + ". Sayi : ");
             numbers[i] = new Scanner(System.in).nextInt();
-            minSayi = numbers[0];
-            maxSayi = numbers[0];
+        }
+
+        int minSayi = numbers[0];
+        int maxSayi = numbers[0];
+
+        for (int i = 0; i < numbers.length; i++) {
+
             if (numbers[i] > maxSayi) {
                 maxSayi = numbers[i];
             }
