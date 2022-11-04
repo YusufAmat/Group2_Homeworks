@@ -20,7 +20,7 @@ public class Task {
         //Porsche - Ferrari(Random price between 100000 and 150000)
 
         String[] cars = {"Honda", "Toyota", "Nissan", "BMW", "Mercedes", "Porsche", "Ferrari"};
-        int fiyat;
+        int fiyat = 0;
         for (int i = 0; i < cars.length; i++) {
             System.out.println(i + 1 + ". " + cars[i]);
         }
@@ -32,8 +32,10 @@ public class Task {
             fiyat = (int) (Math.round(Math.random() * 20000)) + 20000;
         } else if (secim >= 4 & secim <= 5) {
             fiyat = (int) (Math.round(Math.random() * 30000)) + 50000;
-        } else {
+        } else if (secim >= 6 & secim <= 7) {
             fiyat = (int) (Math.round(Math.random() * 50000)) + 100000;
+        } else {
+            System.out.println("Yanlis secim yaptiniz.");
         }
         System.out.printf("Seçtiğiniz araba %s, fiyatı = %d", cars[secim - 1], fiyat);
     }
